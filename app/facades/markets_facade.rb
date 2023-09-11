@@ -1,10 +1,10 @@
 class MarketsFacade 
   def initialize
-    @markets_by_id = {}
+    @market_id = {}
   end
 
   def markets 
-    @markets ||= parse(get_markets).map { |data| Market.new(data) }
+    @markets ||= parse(all_markets).map { |data| Market.new(data) }
   end
 
   private
