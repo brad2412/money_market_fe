@@ -9,10 +9,10 @@ class Market
   def initialize(data)
     @id = data[:id]
     @name = data[:attributes][:name]
-    @street = data[:attributes][:street] || "Unknown Street"
-    @city = data[:attributes][:city]&.squeeze(" ") || "Unknown City"
-    @state = data[:attributes][:state] || "Unknown State"
-    @zip = data[:attributes][:zip] || "Unknown Zip"
+    @street = data[:attributes][:street] || "Street"
+    @city = data[:attributes][:city]&.squeeze(" ") || "City"
+    @state = data[:attributes][:state] || "State"
+    @zip = data[:attributes][:zip] || "Zip"
   end
 
   def vendors
