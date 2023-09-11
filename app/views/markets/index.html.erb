@@ -1,0 +1,22 @@
+<h1>List of Markets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @markets.each do |market| %>
+      <tr>
+        <td><%= market.name %></td>
+        <td><%= market.city %></td>
+        <td><%= market.state %></td>
+        <td><%= link_to "More Info", market_path(market) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
